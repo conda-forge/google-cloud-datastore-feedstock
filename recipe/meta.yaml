@@ -1,6 +1,6 @@
 {% set name = "google-cloud-datastore" %}
-{% set version = "1.15.3" %}
-{% set sha256 = "3da44b4c8230a83e69dd9429324cca9d3000ee8a8bb11f3b005c7837fcd844b3" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "11e5eba37917d0e225d7ad298a0bf5ff7341fcef8e993327c14557197a4cd3fb" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
     - pip
