@@ -157,4 +157,5 @@ Feedstock Maintainers
 * [@mathiaseitz](https://github.com/mathiaseitz/)
 * [@parthea](https://github.com/parthea/)
 * [@trendelkampschroer](https://github.com/trendelkampschroer/)
+* [@xylar](https://github.com/xylar/)
 
