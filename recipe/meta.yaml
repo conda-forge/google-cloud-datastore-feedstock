@@ -1,29 +1,29 @@
 {% set name = "google-cloud-datastore" %}
-{% set version = "1.15.3" %}
-{% set sha256 = "3da44b4c8230a83e69dd9429324cca9d3000ee8a8bb11f3b005c7837fcd844b3" %}
+{% set version = "1.15.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-datastore-{{ version }}.tar.gz
+  sha256: dadca1631088b7a737f311df87574a417f254ce71d6a98080f36f35bdc96b30f
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   build:
-    - python >=2.7
+    - python >=3.7
     - setuptools
     - pip
   run:
-    - python >=2.7
-    - google-cloud-core >=1.4.0, < 2.0dev
-    - google-api-core-grpc >=1.14.0, < 2.0.0dev
+    - python >=3.7
+    - google-api-core-grpc >=1.31.5,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
+    - google-cloud-core >=1.4.0,<3.0dev
+    - protobuf <4.0.0dev
 
 test:
   imports:
@@ -32,6 +32,10 @@ test:
     - google.cloud.datastore
     - google.cloud.datastore_v1
     - google.cloud.datastore_admin_v1
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/googleapis/python-datastore
@@ -50,6 +54,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - xylar
     - mathiaseitz
     - trendelkampschroer
     - parthea
