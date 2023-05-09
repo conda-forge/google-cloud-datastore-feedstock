@@ -1,5 +1,5 @@
 {% set name = "google-cloud-datastore" %}
-{% set version = "2.15.1" %}
+{% set version = "2.15.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-datastore-{{ version }}.tar.gz
-  sha256: 4c2f0e8825482a8998c8c5b672c86206a6d988e449f251bb9bf17dae9a056c2e
+  sha256: 3e73cfec546bc4acae613705b9265dc14b3e15fd3ac8fc89f0e9a4e996ae7efd
 
 build:
   number: 0
