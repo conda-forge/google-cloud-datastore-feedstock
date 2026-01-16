@@ -19,7 +19,6 @@ your users and supports ACID transactions, high availability of reads
 and writes, strong consistency for reads and ancestor queries, and
 eventual consistency for all other queries.
 
-
 Current build status
 ====================
 
