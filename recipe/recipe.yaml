@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-datastore
-  version: 2.23.0
+  version: "2.24.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 80049883a4ae928fdcc661ba6803ec267665dc0e6f3ce2da91441079a6bb6387
+  sha256: f087c02a6aa4ac68bbf17f0c048ae3ee355856bf09c51439bfba193741387792
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
