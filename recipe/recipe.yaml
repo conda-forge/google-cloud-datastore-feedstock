@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-datastore
-  version: "2.25.0"
+  version: "2.26.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: dd646a3d8f99c2750bb5f6e0f18ece7bed95fd76e02dacaddbfa35a2b22328ff
+  sha256: 1ac4882f033fcb90bd75d1171b46400ecd5def23768598843d9c041e0c0b4a6a
 
 build:
   number: 0
